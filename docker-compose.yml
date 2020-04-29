@@ -1,0 +1,12 @@
+﻿version: '3'
+services:  
+  webapi:
+    image: desafio-tecnico
+    build:
+      context: .
+      dockerfile: src/WebApi/Dockerfile
+    ports:
+        - 5001:80
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - MODE_RUNNING=DOCKER
